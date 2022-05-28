@@ -1,0 +1,18 @@
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 500px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px ;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+#0 {
+    height: 400px;
+}
