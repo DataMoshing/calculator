@@ -1,3 +1,9 @@
+const numbers = document.querySelectorAll(".number");
+const displayCurrent = document.getElementById("current");
+const operators = document.querySelectorAll(".operator");
+
+let displayValue = ""
+
 const add = function (a, b) {
     return a + b;
 }
@@ -25,3 +31,15 @@ const operate = function (a, operator, b) {
 }
 
 // console.log(operate(3, "*", 7))
+
+for (const number of numbers) {
+    number.addEventListener("click", () => {
+        displayCurrent.textContent += number.value
+    })
+}
+
+for (const operator of operators) {
+    operator.addEventListener("click", () => {
+        displayCurrent.textContent += operator.value
+    })
+}
