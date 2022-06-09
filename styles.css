@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@200&display=swap');
+
 body {
    display: flex;
    flex-direction: column;
@@ -16,28 +17,29 @@ body {
     grid-template-rows: repeat(5, 80px);
 } 
 
-
-.display-result {
+.display-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    font-size: 40px;
-}
-
-.display {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    white-space: nowrap;
-    background: #8d8d8da8;
-    color: #303030;
-    font-size: 40px;
-    border-radius: 10px;
+    background: #c0c0c0a8;
+    width: 320px;
+    height: 90px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 3px;
 }
 
-.number, .operator, #clearBtn, #equal {
+.display-result {
+    font-size: 45px;
+}
+
+.display-current {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.number, .operator, #clearBtn, #equal, #decimal {
     font-size: 25px;
     font-family: "Quicksand", sans-serif;
     text-align:center;
@@ -51,10 +53,13 @@ body {
 
 #multiplication, #division, #subtraction, #addition {
     background-color: orange;
+    border-radius: 3px;
 }
 
 #equal {
     background-color: rgb(0, 180, 0);
+    grid-row: span 2;
+    border-radius: 3px;
 }
 
 #equal:hover{
@@ -63,6 +68,7 @@ body {
 
 #clearBtn, #deleteBtn {
     background-color: rgb(250, 110, 110);
+    border-radius: 3px;
 }
 
 #clearBtn:hover, #deleteBtn:hover {
@@ -71,4 +77,12 @@ body {
 
 #multiplication:hover, #division:hover, #subtraction:hover, #addition:hover {
     background-color: rgb(196, 127, 0);
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+#decimal {
+    font-weight: 600;
 }
